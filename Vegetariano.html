@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliFood | Restaurant</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .category-item {
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+    }
+    .category-image {
+      width: 110%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .category-name {
+      margin-top: 9px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .menu-geral{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu-geral .categoria-geral{
+        margin: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+
+    .menu-geral .categoria-geral .menu-item{
+        background-color: rgb(white);
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(119,119,119, 0.438);
+        width: 1100px;
+        padding: 10px;
+        padding-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        height: 750px;
+    }
+
+    .menu-geral .categoria-geral .menu-item div{
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    
+    .menu-geral .menu-price{
+        color: red;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+
+    .menu-geral .categoria-geral .menu-item img{
+        width: 120px;
+        margin-bottom: 15px;
+        margin-right: 840px;
+    }
+
+
+    .categoria-geral{
+        display: flex;
+        margin: 280px;
+        margin-top: 25px;
+        flex-direction: row;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .menu-item {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+      }
+
+    
+    .menu-item h3{
+        font-size: 13px;
+        text-align: justify;
+        margin-top: 140px;
+        margin-left: 65px;
+    }
+
+    .menu-item p {
+      display: inline-block;
+      margin-right: 10px;
+    
+    }
+
+
+    .menu-geral .categoria-geral h3{
+        position: relative;
+        bottom: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .menu-geral .categoria-geral .about_text p{
+        width: 650px;
+        text-align: justify;
+        line-height: 23px;
+        margin-top: 10px;
+        margin-left: 100px;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    footer{
+        width: 100%;
+        padding: 30px 0 0 20px;
+        background: #ebb2a8;
+    }
+
+
+    footer .footer_main .footer_tag p{
+        margin: 10px 0;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    footer .end_dois{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        font-size: 16px;
+        font-family: Arial;
+        font-weight: 100;
+    }
+
+    footer .footer_main{
+        display: grid;
+        grid-template-columns: 5fr 5fr 5fr 5fr;
+    }
+
+    footer .footer_main .footer_tag{
+        text-align: center;
+    }
+
+    footer .footer_main .footer_tag h2{
+        color: #000;
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+
+    footer .footer_main .footer_tag i{
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    footer .footer_main .footer_tag i:hover{
+        color: #8b3f3f;
+    }
+
+
+
+    footer .end{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    footer .end span{
+        color: #090909;
+        margin-left: 10px;
+    }
+
+
+    .menu-rest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        margin-top: 10%;
+    }
+    
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+
+            <div class="headerbar">
+                
+                <div class="nav">
+                    <ul>
+                        <a href="/index.html">
+                            <li>HOME</li>
+                        </a>
+                        <a href="/about.html">
+                            <li>SOBRE</li>
+                        </a>
+                        <a href="/restaurant.html">
+                            <li>ESPECIALIDADES</li>
+                        </a>
+                        <a href="/favorites.html">
+                            <li>PORTIFÓLIO</li>
+                        </a>
+                        <a href="/order.html">
+                            <li>CONTATO</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="./images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="/index.html">
+                        <li>HOME</li>
+                    </a>
+                    <a href="/about.html">
+                        <li>SOBRE</li>
+                    </a>
+                    <a href="/restaurant.html">
+                        <li>ESPECIALIDADES</li>
+                    </a>
+                    <a href="/favorites.html">
+                        <li>PORTIFÓLIO</li>
+                    </a>
+                    <a href="/order.html">
+                        <li>CONTATO</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+      
+    </div>
+        <div class="category-container">
+           
+            <div class="menu-geral">
+                <div class="categoria-geral">
+                    <div class="menu-item">
+                        <div>
+                            <img src="/images/sistema-para-gestao-de-obra-fotor-2025011011379.png" alt="Burger" width="140">
+                        </div>
+                        <h3>Gestão de Obras</h3>
+                         
+                        <div class="about_text">
+                            <p>A gestão de obras é uma das especialidades que considero fundamental para o sucesso de qualquer projeto de arquitetura de interiores. Ela envolve não apenas a supervisão da execução, mas também a coordenação de todos os profissionais envolvidos, a gestão dos recursos e o acompanhamento contínuo do cronograma e do orçamento. Com minha experiência, sou capaz de garantir que cada etapa da obra transcorra de forma eficiente, dentro do prazo e do orçamento estabelecidos, mantendo a qualidade e a integridade do conceito original do projeto.
+                               
+                            </p>
+
+                            <p>Minha abordagem na gestão de obras busca a harmonia entre o planejamento prévio e a execução prática, antecipando possíveis desafios e oferecendo soluções rápidas e eficazes. Coordeno as equipes de trabalho, fornecedores e prestadores de serviço, assegurando que todos cumpram suas funções conforme o projeto executivo. Além disso, mantenho uma comunicação constante com o cliente, informando sobre o progresso da obra e ajustando o que for necessário para que o resultado final atenda às expectativas.
+                            
+                            <p>A gestão de obras vai além da fiscalização; ela envolve uma liderança ativa, capaz de garantir que o projeto de interiores seja realizado com excelência em cada detalhe. Meu objetivo é proporcionar tranquilidade aos clientes, assegurando que o trabalho seja feito de maneira cuidadosa, sem imprevistos e com um resultado que reflita o design planejado.</p>
+                        </p>
+                           
+                    </div>
+                </div>
+        </div>
+
+        <footer>
+
+            <div class="footer_main">
+            
+    
+                <div class="footer_tag">
+                    <h2>Quick Link</h2>
+                    <a href="/index.html"><p>Home</p></a>
+                    <a href="/about.html"><p>Sobre</p></a>
+                    <a href="/restaurant.html"><p>Especialidades</p></a>
+                    <a href="/favorites.html"><p>Portifólio</p></a>
+                    <a href="/order.html"><p>Contato</p></a>
+                </div>
+    
+                <div class="footer_tag">
+                    <h2>Contato</h2>
+                    <p>+55 11 9376 9311</p>
+                    <p>+55 11 2229 1174</p>
+                    <p>alinemendes.interiores@gmail.com</p>
+                    <p>alinemendes.lima2000@gmail.com</p>
+                </div>
+    
+                <div class="footer_tag">
+                    <h2>Follows</h2>
+                    <a href="https://www.instagram.com/am_designinteriores/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aline-mendes-57b22823b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+    
+                <div class="footer_logo">
+                    <img src="/images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+                </div>
+                
+            </div>
+    
+            
+                    
+                <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+    
+    
+        </footer>
+    
+    
+    </header>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliFood | Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* Container Principal */
+        .contact-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1300px;
+            margin: 120px;
+            gap: 150px;
+        }
+        
+        /* Seção de Informações de Contato */
+        .contact-info {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(43, 39, 39, 0.1);
+        }
+        
+        .contact-info h1 {
+            color: #333;
+            font-size: 40px;
+        }
+
+        .contact-info h2{
+            color: #333;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #cf8787;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-size: 22px;
+        }
+        
+        
+        /* Seção do Formulário de Contato */
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .form-field {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+
+            <div class="headerbar">
+                
+                <div class="nav">
+                    <ul>
+                        <a href="/index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="/about.html">
+                            <li>Sobre</li>
+                        </a>
+                        <a href="/restaurant.html">
+                            <li>Especialidades</li>
+                        </a>
+                        <a href="/favorites.html">
+                            <li>Portifólio</li>
+                        </a>
+                        <a href="/order.html">
+                            <li>Contato</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="./images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="/index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="/about.html">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="/restaurant.html">
+                        <li>Especialidades</li>
+                    </a>
+                    <a href="/favorites.html">
+                        <li>Portifólio</li>
+                    </a>
+                    <a href="/order.html">
+                        <li>Contato</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h1>Contato</h1>
+            <p>Preencha o formulário, descreva suas necessidades e entrarei em contato o mais breve possível.</p>
+            
+            <h2>Meus Contatos</h2>
+            <br>
+        
+            <div class="contact-item">
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <p><strong>Telefone:</strong> (11) 937697311 / (11) 22291174</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <p><strong>E-mail:</strong> <a href="mailto:alinemendes.interiores@gmail.com">alinemendes.interiores@gmail.com / alinemendes.lima2000@gmail.com</a></p>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h1>Formulário de Contato</h1>
+            <form action="process.php" method="POST">
+                <div class="form-field">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer_main">
+        
+
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <a href="/index.html"><p>Home</p></a>
+                <a href="/about.html"><p>Sobre</p></a>
+                <a href="/restaurant.html"><p>Especialidades</p></a>
+                <a href="/favorites.html"><p>Portifólio</p></a>
+                <a href="/order.html"><p>Contato</p></a>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contato</h2>
+                <p>+55 11 9376 9311</p>
+                <p>+55 11 2229 1174</p>
+                <p>alinemendes.interiores@gmail.com</p>
+                <p>alinemendes.lima2000@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follows</h2>
+                <a href="https://www.instagram.com/am_designinteriores/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aline-mendes-57b22823b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="footer_logo">
+                <img src="/images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+            </div>
+            
+        </div>
+
+        
+                
+            <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+
+    </footer>
+    
+
+    
+
+</header>
+
+
+
+
+
+
+</body>
+</html>

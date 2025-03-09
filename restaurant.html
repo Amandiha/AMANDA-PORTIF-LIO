@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png"  type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aline Mendes | Home</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .category-container h1{
+        width: 850px;
+        text-align:justify;
+        line-height: 25px;
+        margin-top: 30px;
+        font-weight: 200;
+    }
+    .category-item {
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+    }
+    .category-image {
+      width: 110%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .category-name {
+      margin-top: 9px;
+      font-size: 14px;
+      font-weight: bold;
+      justify-self: center;
+      align-items: end;
+    }
+
+    .menu-geral{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 91%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu-geral .categoria-geral{
+        margin: 60px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+
+    .menu-geral .categoria-geral .menu-item{
+        background-color: rgb(white);
+        border-radius: 5px;
+        margin-bottom: 5px;
+        box-shadow: 0 2px 10px rgba(119,119,119, 0.438);
+        width: 220px;
+        padding: 5px;
+        padding-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        height: 250px;
+    }
+
+    .menu-geral .categoria-geral .menu-item div{
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    
+    .menu-geral .menu-price{
+        color: red;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+
+    .menu-geral .categoria-geral .menu-item img{
+        width: 160px;
+        margin-bottom: 15px;
+    }
+
+
+    .categoria-geral{
+        display: flex;
+        margin: 280px;
+        margin-top: 25px;
+        flex-direction: row;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .menu-item {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+      }
+
+    
+    .menu-item h3{
+        font-size: 13px;
+        text-align: center;
+        justify-self: center;
+        align-items: end;
+    }
+
+    .menu-item p {
+      display: inline-block;
+      margin-right: 10px;
+    
+    }
+
+    .green_butn{
+        cursor: pointer;
+        margin-top: 0px;
+        width: 25px;
+        margin-top: 10px;
+        display: flex;
+        margin: 10px 160px;
+        align-items:center;
+        color:aliceblue;
+        height: 25px;
+        background-color: rgb(206, 255, 175);
+        border-radius: 205px;
+        border: 1px solid rgb(184, 248, 165);
+        box-shadow: 0 10px 15px rgb(255, 196, 193);
+        transition: all 0.2s;
+    }
+    
+    .green_butn i{
+        color:rgb(49, 243, 0);
+        transition: all 0.2s;
+        width: 70px;
+    }
+
+    .banner_bgl{
+        width: 100%;
+        height: 80vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/images/unicesumar_unicesumaread_image_784.webp);
+        background-size:auto;
+        background-position: center;
+    }
+    
+    .banner_bgl h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        position: relative;
+        top: 50%;
+        color: #fff;
+    }
+    
+    .banner_bgl h1 span{
+        color: #bc7878;
+        margin-right: 15px;
+    }
+
+    .especialidades h2{
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 600px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2e2929;
+    }
+
+
+    footer{
+        width: 100%;
+        padding: 30px 0 0 20px;
+        background: #ebb2a8;
+    }
+    
+    
+    footer .footer_main .footer_tag p{
+        margin: 10px 0;
+        font-size: 17px;
+        font-family: Arial, sans-serif;
+        font-weight:300;
+    }
+    
+    
+    footer .end_dois{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        font-size: 16px;
+        font-family: Arial;
+        font-weight: 100;
+    }
+    
+    footer .footer_main{
+        display: grid;
+        grid-template-columns: 5fr 5fr 5fr 5fr;
+    }
+    
+    footer .footer_main .footer_tag{
+        text-align: center;
+    
+    }
+    
+    footer .footer_main .footer_tag h2{
+        color: #000;
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+    
+    
+    
+    footer .footer_main .footer_tag i{
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+    footer .footer_main .footer_tag i:hover{
+        color: #8b3f3f;
+    }
+    
+    
+    
+    footer .end{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    
+    footer .end span{
+        color: #090909;
+        margin-left: 10px;
+    }
+
+    .about .about_main .about_text .about_services{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .about .about_main .about_text .about_services .s_1{
+        display: flex;
+        align-items: center;
+        width: 180px;
+        background: #ececec;
+        padding: 10px;
+        border: 2px solid #facc22;
+        cursor: pointer;
+    }
+    
+    .about .about_main .about_text .about_services .s_1 i{
+        color: #000;
+        margin: 5px 10px 5px 5px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    
+    
+    .about .about_main .about_text .about_services .s_1:hover i{
+        color: #facc22;
+    }
+    
+    
+    .about .about_main .about_text .about_services .s_1 i a{
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+    
+    .about .about_main .about_text .about_btn{
+        position: relative;
+        top: 35px;
+        padding: 20px 20px;
+        border: 2px solid #facc22;
+        text-decoration: none;
+        color: #000;
+        z-index: 5;
+        transition: 0.3s; 
+    }
+    
+    .about .about_main .about_text .about_btn i{
+        font-size: 15px;
+        margin-right: 8px;
+    }
+    
+    .about .about_main .about_text .about_btn:hover{
+        color:#000;
+    }
+    
+    .about .about_main .about_text .about_btn::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #facc22;
+        z-index: -1;
+        transition: 0.3s;
+    }
+    
+    .about .about_main .about_text .about_btn:hover::before{
+        top: unset;
+        width: 100%;
+        bottom: 0;
+    }
+
+    
+    .container-wrapper {
+        display: flex;
+        gap: 20px; /* Espaçamento entre os containers */
+        flex-wrap: wrap; /* Permite que os containers fiquem responsivos */
+        justify-content: center; /* Centraliza os containers */
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .container {
+        width: 200px;
+        height: 200px;
+        background-color: #e1ff00;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+    .container img {
+        max-width: 80%; /* A imagem ocupa até 80% da largura do container */
+        max-height: 80%; /* A imagem ocupa até 80% da altura do container */
+        border-radius: 4px; /* Arredondamento suave da imagem */
+    }
+    .container:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease;
+    }
+    
+    </style>
+</head>
+<body>
+        <header>
+            <div class="header">
+    
+                <div class="headerbar">
+                    
+                    <div class="nav">
+                        <ul>
+                            <a href="/index.html">
+                                <li>HOME</li>
+                            </a>
+                            <a href="/about.html">
+                                <li>SOBRE</li>
+                            </a>
+                            <a href="/restaurant.html">
+                                <li>ESPECIALIDADES</li>
+                            </a>
+                            <a href="/favorites.html">
+                                <li>PORTIFÓLIO</li>
+                            </a>
+                            <a href="/order.html">
+                                <li>CONTATO</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="./images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+                </div>
+                <div class="bar">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark" id="hdcross"></i>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="/index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="/about.html">
+                            <li>Sobre</li>
+                        </a>
+                        <a href="/restaurant.html">
+                            <li>Especialidades</li>
+                        </a>
+                        <a href="/favorites.html">
+                            <li>Portifólio</li>
+                        </a>
+                        <a href="/order.html">
+                            <li>Contato</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="banner_bgl">
+
+            <h1><span>Minhas</span>Especialidades</h1>
+    
+        </div>
+    
+    <div class="category-container">
+      <h1>Durante minha trajetória na faculdade e em minhas experiências profissionais, adquiri especialidades que abrangem desde a concepção de projetos criativos até a execução de soluções práticas e funcionais. Desenvolvi habilidades em design de interiores, modelagem 3D e planejamento de espaços, aplicando técnicas inovadoras e refinando minha visão estética. Além disso, realizei projetos autorais que me permitiram explorar minha criatividade e aperfeiçoar meu conhecimento técnico, sempre buscando oferecer resultados personalizados e alinhados às necessidades de cada cliente.</h1>
+    </div>
+
+    <br> 
+    <br>
+    <div class="especialidades">
+        <h2>Principais Plataformas</h2>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="container">
+            <img src="https://totalcad.com.br/wp-content/uploads/SketchUp-Mark-RGB-1200pxl-Copia.png" alt="Imagem 1">
+        </div>
+        <div class="container">
+            <img src="https://seeklogo.com/images/A/autocad-logo-69326D7728-seeklogo.com.png" alt="Imagem 2">
+        </div>
+        <div class="container">
+            <img src="https://seeklogo.com/images/V/v-ray-logo-5829E530DE-seeklogo.com.png" alt="Imagem 3">
+        </div>
+        <div class="container">
+            <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/sketchup_layout_macos_bigsur_icon_189732.png" alt="Imagem 5">
+        </div>
+        <div class="container">
+            <img src="https://nxtdev.build/wp-content/uploads/2024/06/twinmotion-logo.png" alt="Imagem 4">
+        </div>
+        
+    </div>
+        
+
+    
+    
+
+        
+    
+    <div class="category-container">
+           
+            
+            <div class="menu-geral">
+                <div class="categoria-geral">
+                    <div class="menu-item">
+                        <div>
+                            <img src="/images/DALLE2~1-fotor-202501101423.png" alt="Burger" width="140">
+                            <ul>
+        
+                              <li><a class="category-name" href="Lanche.html">Gerenciamento de Projetos </a></li>
+                    
+                            </ul>
+                          </div>
+                         
+                        
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <img src="/images/101118-revisor-entregar-ate-2806-quartafeira-16h-entenda-o-papel-das-normas-iso-no-gerenciamento-de-projetos-1-dca105c7-fotor-20250110114451.png" alt="Pizza" width="140">
+                            <ul>
+        
+                              <li><a class="category-name" href="Pizza.html">Gestão de Projetos
+                            </a></li>
+                    
+                            </ul>
+                        
+                          </div>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <img src="/images/Analise-de-Custos-e-Orcamento-Empresarial-fotor-20250110131839.png" alt="Salad" width="140">
+                            <ul>
+        
+                              <li><a class="category-name" href="Japonesa.html">Análise de Custos e Orçamento
+                            </a></li>
+                    
+                            </ul>
+                        
+                          </div>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <img src="/images/o-que-e-projeto-executivo-produtividade-fotor-20250110113448.png" alt="Burger" width="140">
+                            <ul>
+        
+                              <li><a class="category-name" href="Mexicano.html">Projetos Executivos
+                            </a></li>
+                    
+                            </ul>
+                        
+                          </div>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <img src="/images/sistema-para-gestao-de-obra-fotor-2025011011379.png" alt="Burger" width="140">
+                            <ul>
+        
+                              <li><a class="category-name" href="Vegetariano.html">Gestão de Obras
+                            </a></li>
+                    
+                            </ul>
+                        
+                          </div>
+                        
+                    </div> 
+                    
+                    </div> 
+                    
+                </div>
+    
+        </div> 
+        
+        <footer>
+
+            <div class="footer_main">
+            
+    
+                <div class="footer_tag">
+                    <h2>Quick Link</h2>
+                    <a href="/index.html"><p>Home</p></a>
+                    <a href="/about.html"><p>Sobre</p></a>
+                    <a href="/restaurant.html"><p>Especialidades</p></a>
+                    <a href="/favorites.html"><p>Portifólio</p></a>
+                    <a href="/order.html"><p>Contato</p></a>
+                </div>
+    
+                <div class="footer_tag">
+                    <h2>Contato</h2>
+                    <p>+55 11 9376 9311</p>
+                    <p>+55 11 2229 1174</p>
+                    <p>alinemendes.interiores@gmail.com</p>
+                    <p>alinemendes.lima2000@gmail.com</p>
+                </div>
+    
+                <div class="footer_tag">
+                    <h2>Follows</h2>
+                    <a href="https://www.instagram.com/am_designinteriores/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aline-mendes-57b22823b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+    
+                <div class="footer_logo">
+                    <img src="/images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+                </div>
+                
+            </div>
+    
+            
+                    
+                <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+    
+        </footer>
+        
+
+        
+    
+    </header>
+    
+    
+
+
+    
+
+</body>
+</html>
