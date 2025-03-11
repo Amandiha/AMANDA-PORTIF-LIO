@@ -772,7 +772,7 @@ input[type="radio"] {
 .container {
     width: 80%;
     max-width: 1000px;
-    margin: 20px auto; /* Adiciona margem ao redor do slider */
+    margin: 80px auto; /* Adiciona margem ao redor do slider */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
