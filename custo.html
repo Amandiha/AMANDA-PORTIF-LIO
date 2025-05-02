@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/1-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -139,28 +139,25 @@
         width: 70px;
     }
 
-    .banner_bgl{
+    .banner{
         width: 100%;
-        height: 80vh;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/WhatsApp\ Image\ 2025-01-07\ at\ 19.29.24\ \(4\).jpeg);
-        background-size:auto;
-        background-position: center;
-    }
-    
-    .banner_bgl h1 {
+        height: 100vh; /* Faz o banner ocupar toda a tela */
+        background-image: url('images/Frame\ 3\ \(1\).png'); /* Caminho da imagem de fundo */
+        background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
         position: relative;
-        top: 50%;
-        color: #fff;
     }
-    
-    .banner_bgl h1 span{
-        color: #2ac5f0;
-        margin-right: 15px;
+
+
+    .logo {
+        max-width: 50%; /* Ajuste para o tamanho ideal */
+        height: auto; /* Mantém a proporção */
     }
+
 
     footer{
         width: 100%;
@@ -204,7 +201,6 @@
     }
     
     
-    
     footer .footer_main .footer_tag i{
         margin: 0 5px;
         cursor: pointer;
@@ -216,35 +212,41 @@
     }
     
     
-    
     footer .end{
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 15px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 100;
     }
-
 
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
+        gap: 25px;
         width: 90%;
-        max-width: 1200px;
+        max-width: 1800px;
         margin: 20px auto;
     }
 
     .gallery img {
-        width: 100%;
+        width: 105%;
         height: auto;
         cursor: pointer;
         border-radius: 10px;
         transition: transform 0.3s;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: block;
+        margin-top: 20px;
     }
 
     .gallery img:hover {
         transform: scale(1.05);
     }
+
 
     /* Lightbox */
     .lightbox {
@@ -276,7 +278,7 @@
     }
 
     .lightbox .navigation {
-        position: absolute;
+        position:static;
         top: 50%;
         transform: translateY(-50%);
         font-size: 50px;
@@ -292,23 +294,18 @@
     .lightbox .next {
         right: 30px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-  
+    .frase{
+       
+        margin: 150px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        padding: 10px 5;
+        text-align:center;
+        margin-bottom: 30px;
+        margin-top: 35px;
+        padding-top: 0;
+        font-weight: 500;
+    }
     </style>
 </head>
 <body>
@@ -338,7 +335,7 @@
                     </div>
                 </div>
                 <div class="logo">
-                    <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+                    <img src="images/1-removebg-preview.png" alt="">
                 </div>
                 <div class="bar">
                     <i class="fa-solid fa-bars"></i>
@@ -366,29 +363,43 @@
             </div>
         </header>
 
-        <div class="banner_bgl">
+        <div class="banner"></div>
 
-            <h1><span>Casa</span>Atibaia</h1>
-    
-        </div>
+        <div class= "frase">
+            <p class="frase">Popflix é um aplicativo de streaming de filmes, desenvolvido com foco em praticidade, organização de conteúdo e navegação intuitiva. Todo o design foi criado no Figma e 100% idealizado por mim, com uma interface moderna e voltada para a melhor experiência do usuário.</p>
     
         <div class="gallery">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.25 (2).jpeg" alt="Imagem 1" data-index="0">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.25 (1).jpeg" alt="Imagem 2" data-index="1">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.24 (5).jpeg" alt="Imagem 3" data-index="2">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.26.jpeg" alt="Imagem 4" data-index="3">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.27 (1).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.27 (2).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.26 (5).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.26 (4).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.26 (3).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.26 (2).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.25 (4).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.25 (3).jpeg" alt="Imagem 5" data-index="4">
-            <img src="images/WhatsApp Image 2025-01-07 at 19.29.24 (1).jpeg" alt="Imagem 5" data-index="4">
-
+            <img src="images/strangerthing.png" alt="Imagem 16" data-index="16">
+            <img src="images/spiderman.png" alt="Imagem 14" data-index="14">
+            <img src="images/theboys.png" alt="Imagem 15" data-index="15">
+            <img src="images/harrynew.png" alt="Imagem 16" data-index="16">
+            <img src="images/Gray Minimalist Notification Spa Your Story  (2) (2).png" alt="Imagem 12" data-index="12">
+            <img src="images/Gray Minimalist Notification Spa Your Story  (4) (1) (1).png" alt="Imagem 13" data-index="13">
+            <img src="images/controlz.png" alt="Imagem 16" data-index="16">
+            <img src="images/goodgirl.png" alt="Imagem 16" data-index="16">
 
         </div>
+        </div>
+
+        
+    <div class="containerr">
+        <div class="scroll-box">
+          <img src="images/frame grande.png" alt="Outer Banks" />
+        </div>
+        <div class="scroll-box">
+          <img src="images/frame big.png" alt="The Mandalorian" />
+        </div>
+      </div>
+
+      <div class="containerr">
+        <div class="scroll-box">
+          <img src="images/Frame 78.png" alt="Outer Banks" />
+        </div>
+        <div class="scroll-box">
+          <img src="images/Frame 77.png" alt="The Mandalorian" />
+        </div>
+      </div>
+
     
         <div class="lightbox">
             <span class="close">&times;</span>
@@ -442,16 +453,12 @@
                 if (e.key === 'ArrowRight') showNextImage();
             });
         </script>
-           
- 
-                
 
         </div> 
         
         <footer>
 
             <div class="footer_main">
-            
     
                 <div class="footer_tag">
                     <h2>Quick Link</h2>
@@ -464,10 +471,11 @@
     
                 <div class="footer_tag">
                     <h2>Contato</h2>
-                    <p>+55 11 9376 9311</p>
+                    <p>+55 11 97729 6336</p>
                     <p>+55 11 2229 1174</p>
-                    <p>alinemendes.interiores@gmail.com</p>
-                    <p>alinemendes.lima2000@gmail.com</p>
+                    <p>amandaelima2003@hotmail.com</p>
+                    <p>amandaelima2003@gmail.com</p>
+
                 </div>
     
                 <div class="footer_tag">
@@ -481,19 +489,13 @@
                 </div>
     
                 <div class="footer_logo">
-                    <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+                    <img src="images/1-removebg-preview.png" alt="Logo">
                 </div>
-                
             </div>
     
-            
-                    
-                <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+                <p class="end">@2025 - Amanda Mendes de Lima. Todos os direitos reservados.</p>
     
-        </footer>
-        
-
-        
+        </footer>   
     
     </header>
     

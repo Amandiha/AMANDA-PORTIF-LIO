@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/1-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeliFood | Restaurant</title>
     <style>
@@ -19,7 +19,7 @@
     }
     .category-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap:wrap;
       justify-content: center;
     }
     .category-item {
@@ -44,15 +44,18 @@
         align-items: center;
         width: 100%;
         position: relative;
+       
         z-index: 1;
     }
 
     .menu-geral .categoria-geral{
-        margin: 30px 0;
+        margin: 25px auto; /* <-- Centraliza horizontalmente */
         display: flex;
+        flex-direction: row;
+        justify-content: center; /* <-- Alinha no centro */
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 90%;
+        gap: 10px;
+        text-align: center;
     }
 
     .menu-geral .categoria-geral .menu-item{
@@ -65,26 +68,95 @@
         padding-top: 20px;
         text-align: center;
         cursor: pointer;
-        height: 750px;
+        height: 1100px;
     }
 
     .menu-geral .categoria-geral .menu-item div{
         height: 40px;
         margin-bottom: 15px;
     }
-
-    
-    .menu-geral .menu-price{
-        color: red;
-        font-weight: bold;
-        font-size: 15px;
-    }
     
 
     .menu-geral .categoria-geral .menu-item img{
         width: 120px;
         margin-bottom: 15px;
-        margin-right: 850px;
+        margin-right: 840px;
+    }
+
+    .menu-geral .categoria-geral .menu-item .imagens-baixo{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .menu-geral .categoria-geral .menu-item .imagens-baixo img{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: block;
+        margin-top: 20px;
+        position: relative;
+
+    }
+
+    .imagens-baixo img:hover {
+        transform: scale(1.05);
+    }
+
+    .menu-geral .categoria-geral .menu-item .modal {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        
+    }
+   
+
+    .menu-geral .categoria-geral .menu-item .modal img {
+        width: auto;
+        height: auto;
+        margin-left: 245px;
+        margin-top: 90px;
+        max-width: 70vw; /* 70% da largura da tela */
+        max-height: 80vh; /* 80% da altura da tela */
+        border-radius: 10px;
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* leve sombreado opcional */
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+    .arrow.left {
+        left: 20px;
+    }
+    .arrow.right {
+        right: 20px;
     }
 
 
@@ -95,15 +167,9 @@
         flex-direction: row;
         justify-content:space-evenly;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         text-align: center;
     }
-
-    .menu-item {
-        width: 100px;
-        height: 100px;
-        text-align: center;
-      }
 
     
     .menu-item h3{
@@ -116,7 +182,6 @@
     .menu-item p {
       display: inline-block;
       margin-right: 10px;
-    
     }
 
 
@@ -189,13 +254,14 @@
         color: #8b3f3f;
     }
 
-
-
     footer .end{
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 15px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 100;
     }
 
     footer .end span{
@@ -214,7 +280,6 @@
         margin-top: 10%;
     }
     
-
     
     </style>
 </head>
@@ -245,7 +310,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+                <img src="images/1-removebg-preview.png" alt="">
             </div>
             <div class="bar">
                 <i class="fa-solid fa-bars"></i>
@@ -282,30 +347,74 @@
                 <div class="categoria-geral">
                     <div class="menu-item">
                         <div>
-                            <img src="images/Analise-de-Custos-e-Orcamento-Empresarial-fotor-20250110131839.png" alt="Burger" width="140">
+                            <img src="images/tecno.png" alt="Burger" width="140">
                         </div>
-                        <h3>Análise de Custos e Orçamento</h3>
+                        <h3>Desenvolvimento de Software</h3>
                          
                         <div class="about_text">
-                            <p>A análise de custos e orçamento é uma parte fundamental do meu trabalho como arquiteta de interiores, garantindo que cada projeto seja executado dentro do planejamento financeiro, sem comprometer a qualidade ou a estética do ambiente. Esta especialidade requer uma visão detalhista e estratégica para estimar com precisão os custos de materiais, mão de obra e outros recursos necessários para a realização do projeto.
-                               
+                            <p>O desenvolvimento de software é um processo complexo que envolve várias etapas, desde o planejamento inicial até a entrega do produto final. Uma parte fundamental desse processo é o aprendizado contínuo e a aplicação prática de conceitos em projetos reais. Durante minha faculdade, tive a oportunidade de vivenciar o desenvolvimento de software de forma prática, utilizando ferramentas como Python, HTML, CSS e outros recursos, e aprendendo por meio de projetos desafiadores, como o Projeto Integrador e diversas outras matérias.   
                             </p>
-
-                            <p>Através de uma análise meticulosa, consigo definir um orçamento realista e alinhado com as expectativas do cliente, levando em conta fatores como o tipo de acabamento, a complexidade do design e as necessidades específicas de cada ambiente. Além disso, o acompanhamento contínuo dos custos ao longo do processo garante que o projeto seja mantido dentro dos limites estabelecidos, evitando surpresas e ajustando rapidamente qualquer desvio.
+                            <p>O Projeto Integrador foi um marco importante nessa jornada, pois me desafiou a aplicar tudo o que aprendi em um projeto maior, que exigia desde a concepção da ideia até a implementação final. Esse projeto envolvia resolver um problema real e criar uma solução prática, levando em consideração as necessidades dos usuários e as funcionalidades esperadas. Durante esse processo, aprendi a importância do trabalho em equipe, da comunicação constante com os stakeholders e da validação contínua das hipóteses de desenvolvimento.
+                            <p>Minha experiência em análise de custos me permite encontrar soluções criativas e eficientes, combinando qualidade e economia. Ao otimizar o uso de recursos e negociar com fornecedores, busco sempre oferecer o melhor custo-benefício, sem abrir mão do design e da funcionalidade. Esse equilíbrio é essencial para garantir que o projeto seja executado com sucesso, respeitando o orçamento e atendendo às necessidades e desejos do cliente.</p></p>
+                            <p>Esses projetos não só me ensinaram as técnicas e linguagens de programação necessárias para o desenvolvimento de software, mas também me mostraram a importância de se adaptar a diferentes contextos, atender às necessidades dos usuários e trabalhar de forma ágil e eficiente. O aprendizado prático durante a faculdade me preparou para os desafios do mercado de trabalho, onde a experiência real de desenvolvimento é essencial para criar soluções eficazes e inovadoras.</p>
                             
-                            <p>Minha experiência em análise de custos me permite encontrar soluções criativas e eficientes, combinando qualidade e economia. Ao otimizar o uso de recursos e negociar com fornecedores, busco sempre oferecer o melhor custo-benefício, sem abrir mão do design e da funcionalidade. Esse equilíbrio é essencial para garantir que o projeto seja executado com sucesso, respeitando o orçamento e atendendo às necessidades e desejos do cliente.</p>
-                        </p>
-                            <p>Em resumo, a análise de custos e orçamento não é apenas sobre controlar despesas, mas sobre planejar e executar de forma estratégica, garantindo que cada projeto seja concluído dentro dos parâmetros financeiros definidos, sem perder a essência e a qualidade que o torna único.
-                                
-                                </p>
-                    </div>
+                            <div class="imagens-baixo">
+                                <img src="images/DESENVOLVIMENTO1.png" alt="Descrição 1" onclick="openModal(0)">
+                                <img src="images/DESENVOLVIMENTO2.png" alt="Descrição 2" onclick="openModal(1)">
+                                <img src="images/DESENVOLVIMENTO3.png" alt="Descrição 3" onclick="openModal(2)">
+                                <img src="images/DESENVOLVIMENTO4.png" alt="Descrição 4" onclick="openModal(3)">
+                                <img src="images/DESENVOLVIMENTO5.png" alt="Descrição 5" onclick="openModal(5)">
+
+                            </div>
+    
+                            <div class="modal" id="modal">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <span class="arrow left" onclick="prevImage()">&#10094;</span>
+                                <img id="modal-image" src="">
+                                <span class="arrow right" onclick="nextImage()">&#10095;</span>
+                            </div>
+                              
+                            <script>
+                                const images = [
+                                  'images/DESENVOLVIMENTO1.png',
+                                  'images/DESENVOLVIMENTO2.png',
+                                  'images/DESENVOLVIMENTO3.png',
+                                  'images/DESENVOLVIMENTO4.png',
+                                  'images/DESENVOLVIMENTO5.png'
+
+
+                                ];
+                                let currentIndex = 0;
+                              
+                                function openModal(index) {
+                                  currentIndex = index;
+                                  document.getElementById('modal-image').src = images[currentIndex];
+                                  document.getElementById('modal').style.display = 'block';
+                                }
+                              
+                                function closeModal() {
+                                  document.getElementById('modal').style.display = 'none';
+                                }
+                              
+                                function nextImage() {
+                                  currentIndex = (currentIndex + 1) % images.length;
+                                  document.getElementById('modal-image').src = images[currentIndex];
+                                }
+                              
+                                function prevImage() {
+                                  currentIndex = (currentIndex - 1 + images.length) % images.length;
+                                  document.getElementById('modal-image').src = images[currentIndex];
+                                }
+                            </script>
+    
+                        </div>
                 </div>
         </div>
 
+                
         <footer>
 
             <div class="footer_main">
-            
     
                 <div class="footer_tag">
                     <h2>Quick Link</h2>
@@ -318,10 +427,11 @@
     
                 <div class="footer_tag">
                     <h2>Contato</h2>
-                    <p>+55 11 9376 9311</p>
+                    <p>+55 11 97729 6336</p>
                     <p>+55 11 2229 1174</p>
-                    <p>alinemendes.interiores@gmail.com</p>
-                    <p>alinemendes.lima2000@gmail.com</p>
+                    <p>amandaelima2003@hotmail.com</p>
+                    <p>amandaelima2003@gmail.com</p>
+
                 </div>
     
                 <div class="footer_tag">
@@ -335,19 +445,14 @@
                 </div>
     
                 <div class="footer_logo">
-                    <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+                    <img src="images/1-removebg-preview.png" alt="Logo">
                 </div>
-                
             </div>
     
-            
-                    
-                <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+                <p class="end">@2025 - Amanda Mendes de Lima. Todos os direitos reservados.</p>
     
-    
-        </footer>
-    
-    
+        </footer>   
+
     </header>
 
 </body>

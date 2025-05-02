@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/1-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeliFood | Restaurant</title>
     <style>
@@ -19,7 +19,7 @@
     }
     .category-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap:wrap;
       justify-content: center;
     }
     .category-item {
@@ -44,15 +44,18 @@
         align-items: center;
         width: 100%;
         position: relative;
+       
         z-index: 1;
     }
 
     .menu-geral .categoria-geral{
-        margin: 30px 0;
+        margin: 25px auto; /* <-- Centraliza horizontalmente */
         display: flex;
+        flex-direction: row;
+        justify-content: center; /* <-- Alinha no centro */
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 90%;
+        gap: 10px;
+        text-align: center;
     }
 
     .menu-geral .categoria-geral .menu-item{
@@ -65,19 +68,12 @@
         padding-top: 20px;
         text-align: center;
         cursor: pointer;
-        height: 750px;
+        height: 1250px;
     }
 
     .menu-geral .categoria-geral .menu-item div{
         height: 40px;
         margin-bottom: 15px;
-    }
-
-    
-    .menu-geral .menu-price{
-        color: red;
-        font-weight: bold;
-        font-size: 15px;
     }
     
 
@@ -85,6 +81,82 @@
         width: 120px;
         margin-bottom: 15px;
         margin-right: 840px;
+    }
+
+    .menu-geral .categoria-geral .menu-item .imagens-baixo{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .menu-geral .categoria-geral .menu-item .imagens-baixo img{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: block;
+        margin-top: 20px;
+        position: relative;
+
+    }
+
+    .imagens-baixo img:hover {
+        transform: scale(1.05);
+    }
+
+    .menu-geral .categoria-geral .menu-item .modal {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        
+    }
+   
+
+    .menu-geral .categoria-geral .menu-item .modal img {
+        width: auto;
+        height: auto;
+        margin-left: 250px;
+        margin-top: 100px;
+        max-width: 70vw; /* 70% da largura da tela */
+        max-height: 80vh; /* 80% da altura da tela */
+        border-radius: 10px;
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* leve sombreado opcional */
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+    .arrow.left {
+        left: 20px;
+    }
+    .arrow.right {
+        right: 20px;
     }
 
 
@@ -95,15 +167,9 @@
         flex-direction: row;
         justify-content:space-evenly;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         text-align: center;
     }
-
-    .menu-item {
-        width: 100px;
-        height: 100px;
-        text-align: center;
-      }
 
     
     .menu-item h3{
@@ -116,7 +182,6 @@
     .menu-item p {
       display: inline-block;
       margin-right: 10px;
-    
     }
 
 
@@ -189,20 +254,20 @@
         color: #8b3f3f;
     }
 
-
-
     footer .end{
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 15px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 100;
     }
 
     footer .end span{
         color: #090909;
         margin-left: 10px;
     }
-
 
     .menu-rest{
         display: flex;
@@ -214,7 +279,6 @@
         margin-top: 10%;
     }
     
-
     
     </style>
 </head>
@@ -245,7 +309,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+                <img src="images/1-removebg-preview.png" alt="">
             </div>
             <div class="bar">
                 <i class="fa-solid fa-bars"></i>
@@ -282,30 +346,70 @@
                 <div class="categoria-geral">
                     <div class="menu-item">
                         <div>
-                            <img src="images/o-que-e-projeto-executivo-produtividade-fotor-20250110113448.png" alt="Burger" width="140">
+                            <img src="images/fotor-2025042219171.png" alt="Burger" width="140">
                         </div>
-                        <h3>Projetos Executivos</h3>
+                        <h3>Design e Prototipagem</h3>
                          
                         <div class="about_text">
-                            <p>A elaboração de projetos executivos é uma das minhas especialidades, e desempenha um papel crucial no sucesso de qualquer obra de arquitetura de interiores. Este tipo de projeto é o que traduz todas as ideias criativas e conceituais em detalhes técnicos que guiarão a execução da obra de maneira precisa e eficiente. Como arquiteta de interiores, a criação de um projeto executivo bem estruturado é fundamental para garantir que todas as etapas da obra ocorram de forma organizada, sem imprevistos e com total conformidade ao que foi planejado.
-                               
+                            <p>No meu processo de aprendizado para criação de interfaces e protótipos, as ferramentas Figma e Framer foram essenciais para me ajudar a desenvolver soluções cada vez mais complexas e interativas. Desde o início da faculdade, eu já sabia que o design de interfaces iria exigir uma combinação de habilidades técnicas e criativas, e essas ferramentas se tornaram fundamentais para tornar as ideias em algo visualmente impactante e funcional.
+                            </p>
+                            <p>No Figma, aprendi a importância de criar designs estruturados, começando com wireframes e passando para layouts detalhados e protótipos interativos. O Figma me proporcionou um ambiente colaborativo onde pude criar e testar interfaces de forma ágil, ajustando rapidamente elementos de design e fluxos de navegação com base no feedback. Além disso, o Figma me permitiu trabalhar com componentes reutilizáveis, o que otimizou meu fluxo de trabalho e garantiu consistência em todo o design, algo crucial quando se trabalha em projetos maiores ou em equipe.
+                            <p>Com o tempo, percebi que apenas criar designs estáticos não era suficiente para capturar a verdadeira experiência do usuário. Foi então que o Framer entrou no meu processo de aprendizado, permitindo-me adicionar uma camada de interatividade e animação aos protótipos. Com o Framer, pude criar animações complexas e transições suaves que deram vida às interfaces, permitindo que eu simulasse de forma realista como o usuário interagiria com o produto final. Isso foi especialmente útil em projetos que exigiam uma navegação fluída e uma experiência mais dinâmica, como aplicativos e sites interativos.</p>
+                            </p>
+                            <p>O processo de combinar o Figma para o design e o Framer para a animação e interatividade me permitiu entender a importância de validar as ideias antes de passar para o desenvolvimento. Com esses protótipos dinâmicos, pude testar a experiência do usuário de forma imersiva, fazer ajustes rápidos e iterar sobre os designs com base nos testes de usabilidade.A medida que fui aprimorando minhas habilidades, também aprendi a importância de cada etapa do processo: desde a pesquisa inicial e o levantamento de requisitos, até a criação de wireframes no Figma, a prototipação no Framer e os testes interativos. Cada fase do processo me ajudou a entender melhor as necessidades dos usuários, a otimizar a experiência e a criar soluções cada vez mais refinadas e eficientes.
                             </p>
 
-                            <p>Meu foco nos projetos executivos está em fornecer uma documentação clara e completa, que contemple desde plantas baixas detalhadas até especificações de materiais, acabamentos e mobiliário. Cada elemento é cuidadosamente planejado para assegurar que a execução atenda tanto aos requisitos estéticos quanto funcionais do projeto, respeitando o cronograma e o orçamento estabelecidos.
-                            
-                            <p>Além disso, sou responsável por elaborar detalhes construtivos que garantem a perfeita integração entre os diversos aspectos do design, como iluminação, acabamentos e mobiliário. O projeto executivo serve como um guia para todos os profissionais envolvidos na obra, como engenheiros, eletricistas e fornecedores, garantindo que todos trabalhem de maneira alinhada e eficiente.</p>
-                        </p>
-                            <p>Com uma abordagem focada na qualidade e na precisão, meus projetos executivos proporcionam segurança, controle e clareza para a execução do projeto de interiores, permitindo que ele seja realizado conforme o planejado e entregue com excelência.
-                                
-                                </p>
+                            <div class="imagens-baixo">
+                                <img src="images/ux4.png" alt= "Descrição 1" onclick="openModal(0)">
+                                <img src="images/ux5.png" alt="Descrição 2" onclick="openModal(1)">
+                                <img src="images/ux6.png" alt="Descrição 3" onclick="openModal(2)">
+
+                            </div>
+    
+                            <div class="modal" id="modal">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <span class="arrow left" onclick="prevImage()">&#10094;</span>
+                                <img id="modal-image" src="">
+                                <span class="arrow right" onclick="nextImage()">&#10095;</span>
+                            </div>
+                              
+                            <script>
+                                const images = [
+                                  'images/ux4.png',
+                                  'images/ux5.png',
+                                  'images/ux6.png',
+                                ];
+                                let currentIndex = 0;
+                              
+                                function openModal(index) {
+                                  currentIndex = index;
+                                  document.getElementById('modal-image').src = images[currentIndex];
+                                  document.getElementById('modal').style.display = 'block';
+                                }
+                              
+                                function closeModal() {
+                                  document.getElementById('modal').style.display = 'none';
+                                }
+                              
+                                function nextImage() {
+                                  currentIndex = (currentIndex + 1) % images.length;
+                                  document.getElementById('modal-image').src = images[currentIndex];
+                                }
+                              
+                                function prevImage() {
+                                  currentIndex = (currentIndex - 1 + images.length) % images.length;
+                                  document.getElementById('modal-image').src = images[currentIndex];
+                                }
+                            </script>
+    
                     </div>
                 </div>
         </div>
-
+        
+                
         <footer>
 
             <div class="footer_main">
-            
     
                 <div class="footer_tag">
                     <h2>Quick Link</h2>
@@ -318,10 +422,11 @@
     
                 <div class="footer_tag">
                     <h2>Contato</h2>
-                    <p>+55 11 9376 9311</p>
+                    <p>+55 11 97729 6336</p>
                     <p>+55 11 2229 1174</p>
-                    <p>alinemendes.interiores@gmail.com</p>
-                    <p>alinemendes.lima2000@gmail.com</p>
+                    <p>amandaelima2003@hotmail.com</p>
+                    <p>amandaelima2003@gmail.com</p>
+
                 </div>
     
                 <div class="footer_tag">
@@ -335,18 +440,13 @@
                 </div>
     
                 <div class="footer_logo">
-                    <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+                    <img src="images/1-removebg-preview.png" alt="Logo">
                 </div>
-                
             </div>
     
-            
-                    
-                <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+                <p class="end">@2025 - Amanda Mendes de Lima. Todos os direitos reservados.</p>
     
-    
-        </footer>
-    
+        </footer>   
     
     </header>
 

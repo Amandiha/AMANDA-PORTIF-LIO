@@ -172,30 +172,36 @@
 .main_slide{
     display: flex;
     align-items: center;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-left: 20px;
 }
 
 .main_slide div:nth-child(2){
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    align-items: center;
+    padding-top: 0px;
 }
 
 .main_slide div:nth-child(1){
-    padding-top: 20px;
+    padding-top: 0px;
     flex: 1;
-    font-size: 30px;
+    font-size: 31px;
 }
 
 .main_slide img{
-    max-width: 880px;
-    margin-left: 20px;
+    max-width: 480px;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
 }
 
 .main_slide div:nth-child(1) p{
     font-size: 13px;
-    padding: 20px 0;
+    padding: 30px 0;
+    text-align: justify;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
@@ -203,23 +209,30 @@
     color: rgb(198, 146, 133);
     text-decoration: underline;
     text-underline-offset: 10px;
-    line-height: 80px;
+    line-height: 60px;
     text-decoration-color: rgb(113, 85, 78);
 }
 
-.red_btn{
-    cursor: pointer;
-    margin-top: 20px;
-    width: 160px;
-    font-weight: bold;
-    color:aliceblue;
-    line-height: 50px;
-    background-color: rgb(189, 127, 102);
-    border-radius: 5px;
-    border: 1px solid rgb(175, 146, 135);
-    box-shadow: 0 10px 15px rgb(176, 123, 102);
-    transition: all 0.2s;
+.carousel-images {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente se quiser */
+    padding-bottom: 40px; /* espaço entre o vídeo e o rodapé */
 }
+
+.images {
+    width: 80%; /* você pode ajustar, tipo 100%, 60% etc. */
+    max-width: 800px; /* limita o tamanho máximo do vídeo */
+}
+
+.images video {
+    width: 100%; /* o vídeo ocupa toda a largura da div */
+    height: auto; /* mantém a proporção correta */
+    border-radius: 10px; /* deixa as bordas arredondadas, opcional */
+}
+
+
+
 
 .green_btn{
     cursor: pointer;
@@ -245,6 +258,35 @@
 }
 
 
+.red_btn{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 160px;
+    font-weight: bold;
+    color:aliceblue;
+    line-height: 50px;
+    background-color: rgb(189, 127, 102);
+    border-radius: 5px;
+    border: 1px solid rgb(175, 146, 135);
+    box-shadow: 0 10px 15px rgb(176, 123, 102);
+    transition: all 0.2s;
+}
+
+
+.redd_btn{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 160px;
+    font-weight: bold;
+    color:aliceblue;
+    line-height: 50px;
+    background-color: rgb(189, 127, 102);
+    border-radius: 5px;
+    border: 1px solid rgb(175, 146, 135);
+    box-shadow: 0 10px 15px rgb(176, 123, 102);
+    transition: all 0.2s;
+}
+
 
 .red_btn i{
     color:rgb(255, 255, 255);
@@ -263,6 +305,26 @@
     color: rgb(189, 127, 102);
 }
 
+
+.redd_btn i{
+    color:rgb(255, 255, 255);
+    transition: all 0.2s;
+}
+
+.redd_btn:hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 15px rgb(221, 186, 172);
+    border: 1px solid rgb(232, 204, 195);
+    color: rgb(189, 127, 102);
+
+}
+
+.redd_btn:hover i{
+    color: rgb(189, 127, 102);
+}
+
+
+
 .food-items{
     margin: 70px 0;
     padding: 20px 0;
@@ -279,9 +341,27 @@
     text-align:center;
 }
 
+
 .item img{
+    width: 290px;
+    margin-bottom: 15px;
+}
+
+.itemm{
+    width: 350px;
+    padding: 30px;
+    text-align:center;
+}
+
+.itemm img{
     width: 190px;
     margin-bottom: 15px;
+}
+
+.itemm p{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .item p{
@@ -311,9 +391,37 @@
 }
 
 .item .red_btn, .item .white_btn{
-    width: 120px;
-    line-height: 35px;
+    width: 140px;
+    line-height: 40px;
 }
+
+
+.whitee_btn{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 160px;
+    font-weight: bold;
+    color: rgb(158, 113, 95);
+    line-height: 50px;
+    border: 1px solid rgb(208, 180, 168);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgb(254, 208, 190);
+    transition: all 0.2s;
+}
+
+.whitee_btn:hover{
+    color: white;
+    background-color: rgb(177, 130, 111);
+    box-shadow: 0 10px 15px rgb(202, 158, 142);
+}
+
+.itemm .redd_btn, .itemm .whitee_btn{
+    width: 140px;
+    line-height: 40px;
+}
+
+
 
 .main_slide2{
     margin: 80px 0;
@@ -495,7 +603,7 @@
 
 .footer{
     padding: 60px 0;
-    border-top: 2px solid rgb(255, 255, 4);
+    border-top: 12px solid rgb(255, 255, 4);
     background-color: rgb(white);
     display: flex;
     flex-wrap:wrap;
@@ -547,28 +655,47 @@
     overflow: hidden;
 }
 
+
 .carousel-images {
     display: flex;
-    width: 80%; /* 100% para cada imagem */
-    height: 100%;
-    transition: transform 0.5s ease-in-out; /* Transição suave ao mudar de slide */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente se quiser */
+    padding-bottom: 10px; /* espaço entre o vídeo e o rodapé */
 }
 
-.carousel-images .image {
-    width: 100%;
-    flex-shrink: 0; /* Garante que cada imagem ocupe 100% */
-    height: 100%;
+.video-container {
+    width: 80%; /* você pode ajustar, tipo 100%, 60% etc. */
+    max-width: 1800px; /* limita o tamanho máximo do vídeo */
+}
+
+.video-container video {
+    width: 100%; /* o vídeo ocupa toda a largura da div */
+    height: auto; /* mantém a proporção correta */
+    border-radius: 10px; /* deixa as bordas arredondadas, opcional */
+}
+
+
+
+.carousel-imagess {
     display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center; 
+    margin-top: 200px;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente se quiser */
+    padding-bottom: 10px; /* espaço entre o vídeo e o rodapé */
 }
 
-.carousel-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cobre o espaço sem distorcer a imagem */
-    
+.video-containerr {
+    width: 80%; /* você pode ajustar, tipo 100%, 60% etc. */
+    max-width: 800px; /* limita o tamanho máximo do vídeo */
 }
+
+.video-containerr video {
+    width: 100%; /* o vídeo ocupa toda a largura da div */
+    height: auto; /* mantém a proporção correta */
+    border-radius: 10px; /* deixa as bordas arredondadas, opcional */
+}
+
+
 
 /* Radio buttons invisíveis */
 input[type="radio"] {
@@ -632,13 +759,27 @@ input[type="radio"] {
 }
 
 
+.banner{
+    width: 100%;
+    height: 100vh; /* Faz o banner ocupar toda a tela */
+    background-image: url('images/Captura\ de\ tela\ 2025-04-01\ 213100-Photoroom.png'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: relative;
+}
+
 
 .banner_bg{
     width: 100%;
     height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/WhatsApp\ Image\ 2025-01-07\ at\ 21.00.36\ \(2\).jpeg);
-    background-size:auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/image2-5.png);
+    background-size:cover;
     background-position: center;
+    background-repeat: no-repeat ;
 }
 
 .banner_bg h1 {
@@ -652,7 +793,7 @@ input[type="radio"] {
 }
 
 .banner_bg h1 span{
-    color: #bc7878;
+    color: #c99090;
     margin-right: 15px;
 }
 
@@ -670,15 +811,16 @@ input[type="radio"] {
     align-items: center;  
     justify-content: center; 
     flex-wrap: wrap; 
-    gap: 20px; 
+    gap: 150px; 
     text-align: center; 
 }
 
 .about .about_main .about_image img{
-    width: 750px;
+    width: 650px;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    
 }
 
 .about .about_main .about_text h3{
@@ -770,14 +912,15 @@ input[type="radio"] {
 }
 
 .container {
-    width: 80%;
+    width: 50%;
     max-width: 1000px;
     margin: 120px auto; /* Adiciona margem ao redor do slider */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 2px;
+    margin-top: 300px;
+    overflow: hidden;
 }
 
 .slider-container {
@@ -789,7 +932,7 @@ input[type="radio"] {
 .slider {
     display: flex;
     width: 100%;
-    animation: slide 12s infinite;
+    animation: slide 15s infinite linear;
 }
 
 .slide {
@@ -799,11 +942,32 @@ input[type="radio"] {
 
 .slide img {
     width: 100%;
-    max-width: 1800px;
     height: auto;
     display: block;
     border-radius: 10px;
 }
+
+.containerr {
+    display: flex;
+    gap: 20px; /* Espaço entre as imagens */
+    height: 800px; /* Altura visível do container */
+    overflow: hidden;
+    margin: 100px;
+  }
+  
+  .scroll-box {
+    flex: 1;
+    overflow-y: scroll;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    height: 100%;
+  }
+  
+  .scroll-box img {
+    width: 100%;
+    display: block;
+  }
+  
 
 /* Animação do slider */
 @keyframes slide {
@@ -816,16 +980,6 @@ input[type="radio"] {
 }
 
 
-footer .footer_main{
-    display: grid;
-    grid-template-columns: 5fr 5fr 5fr 5fr;
-}
-
-footer .footer_main .footer_tag{
-    text-align: center;
-}
-
-
 .anim{
     transform: translateY(40px);
     animation: moveup 0.5s linear forwards;
@@ -835,13 +989,15 @@ footer .footer_main .footer_tag{
 
 footer{
     width: 100%;
-    padding: 30px 0 0 0px;
+    padding: 30px 0 0 20px;
     background: #ebb2a8;
 }
 
 
 footer .footer_main .footer_tag p{
     margin: 10px 0;
+    font-size: 17px;
+    font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -851,6 +1007,9 @@ footer .end_dois{
     align-items: center;
     justify-content: center;
     padding: 15px 0;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 100;
 }
 
 footer .footer_main{
@@ -868,10 +1027,8 @@ footer .footer_main .footer_tag h2{
     font-size: 30px;
 }
 
-
-
 footer .footer_main .footer_tag i{
-    margin: 0 8px;
+    margin: 0 5px;
     cursor: pointer;
     font-size: 20px;
 }
@@ -881,13 +1038,12 @@ footer .footer_main .footer_tag i:hover{
 }
 
 
-
-
 footer .end{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer .end span{
@@ -974,16 +1130,12 @@ footer .end span{
 .menu-itemrest p {
   display: inline-block;
   margin-right: 10px;
-
 }
 
 
 .fotominha{
     text-align: center;
     margin: 50px;
-    
-
-    
 }
 
 

@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/1-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeliFood | Restaurant</title>
     <style>
@@ -19,7 +19,7 @@
     }
     .category-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap:wrap;
       justify-content: center;
     }
     .category-item {
@@ -44,15 +44,18 @@
         align-items: center;
         width: 100%;
         position: relative;
+       
         z-index: 1;
     }
 
     .menu-geral .categoria-geral{
-        margin: 30px 0;
+        margin: 25px auto; /* <-- Centraliza horizontalmente */
         display: flex;
+        flex-direction: row;
+        justify-content: center; /* <-- Alinha no centro */
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 90%;
+        gap: 10px;
+        text-align: center;
     }
 
     .menu-geral .categoria-geral .menu-item{
@@ -65,19 +68,12 @@
         padding-top: 20px;
         text-align: center;
         cursor: pointer;
-        height: 750px;
+        height: 1100px;
     }
 
     .menu-geral .categoria-geral .menu-item div{
         height: 40px;
         margin-bottom: 15px;
-    }
-
-    
-    .menu-geral .menu-price{
-        color: red;
-        font-weight: bold;
-        font-size: 15px;
     }
     
 
@@ -85,6 +81,82 @@
         width: 120px;
         margin-bottom: 15px;
         margin-right: 840px;
+    }
+
+    .menu-geral .categoria-geral .menu-item .imagens-baixo{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .menu-geral .categoria-geral .menu-item .imagens-baixo img{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: block;
+        margin-top: 20px;
+        position: relative;
+
+    }
+
+    .imagens-baixo img:hover {
+        transform: scale(1.05);
+    }
+
+    .menu-geral .categoria-geral .menu-item .modal {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        
+    }
+   
+
+    .menu-geral .categoria-geral .menu-item .modal img {
+        width: auto;
+        height: auto;
+        margin-left: 370px;
+        margin-top: 70px;
+        max-width: 70vw; /* 70% da largura da tela */
+        max-height: 80vh; /* 80% da altura da tela */
+        border-radius: 10px;
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* leve sombreado opcional */
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+    .arrow.left {
+        left: 20px;
+    }
+    .arrow.right {
+        right: 20px;
     }
 
 
@@ -95,15 +167,9 @@
         flex-direction: row;
         justify-content:space-evenly;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         text-align: center;
     }
-
-    .menu-item {
-        width: 100px;
-        height: 100px;
-        text-align: center;
-      }
 
     
     .menu-item h3{
@@ -116,7 +182,6 @@
     .menu-item p {
       display: inline-block;
       margin-right: 10px;
-    
     }
 
 
@@ -190,12 +255,14 @@
     }
 
 
-
     footer .end{
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 15px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 100;
     }
 
     footer .end span{
@@ -214,7 +281,7 @@
         margin-top: 10%;
     }
     
-
+    
     
     </style>
 </head>
@@ -245,7 +312,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="">
+                <img src="images/1-removebg-preview.png" alt="">
             </div>
             <div class="bar">
                 <i class="fa-solid fa-bars"></i>
@@ -282,32 +349,75 @@
                 <div class="categoria-geral">
                     <div class="menu-item">
                         <div>
-                            <img src="images/DALLE2~1-fotor-202501101423.png" alt="Burger" width="140">
+                            <img src="images/requisitos.png" alt="Burger" width="140">
                         </div>
-                        <h3>Gerenciamento de Projetos</h3>
+                        <h3>Levantamento e Análise de Requisitos</h3>
                          
                         <div class="about_text">
-                            <p>Como arquiteta de interiores, vejo o gerenciamento de projetos como uma das etapas mais importantes para garantir que cada conceito criativo saia do papel e se torne um espaço real, funcional e acolhedor. Essa especialidade combina organização, planejamento e execução com um toque pessoal, para que cada projeto seja único e reflita a visão do cliente.
+                            <p>No desenvolvimento de soluções tecnológicas, o levantamento e a análise de requisitos são etapas essenciais para garantir que o produto final realmente atenda às necessidades dos usuários e do negócio. Essa prática envolve mais do que apenas coletar informações; exige escuta ativa, interpretação crítica e a capacidade de transformar necessidades, muitas vezes abstratas, em requisitos claros e objetivos.
                                
                             </p>
 
-                            <p>Gerenciar um projeto vai além de organizar prazos e coordenar equipes. É compreender profundamente as necessidades do cliente, planejar cada detalhe com precisão e acompanhar todas as etapas do processo, desde a escolha de materiais até a finalização da obra. Durante o caminho, é preciso solucionar desafios de forma criativa, manter a comunicação clara e garantir que tudo esteja alinhado ao orçamento e aos objetivos iniciais.
+                            <p>Levantar requisitos significa entender o problema de forma profunda: conversar com stakeholders, investigar processos e mapear tudo o que o sistema precisa contemplar. Já a análise de requisitos vai além da coleta — é onde se avalia a viabilidade, se detectam conflitos e se define, com precisão, o que será construído. Um levantamento bem-feito é o alicerce que guia o desenvolvimento, evitando retrabalho e aumentando a qualidade e a eficiência do projeto.
                             
-                            <p>Para mim, o gerenciamento de projetos é a arte de transformar ideias em resultados concretos. Ele exige equilíbrio entre técnica e sensibilidade, e é exatamente aí que encontro minha paixão: criar ambientes que não apenas atendam às expectativas, mas também superem os sonhos de quem confiar em meu trabalho.</p>
+                            <p>Durante minha graduação, pude vivenciar a importância dessa etapa em diferentes projetos acadêmicos, como o desenvolvimento de sistemas de gestão, aplicativos para organização de tarefas e sites institucionais. Nessas atividades, eram apresentadas situações e demandas específicas que exigiam um levantamento detalhado das necessidades dos usuários e do funcionamento esperado das soluções. Ao realizar o levantamento de requisitos de forma estruturada,aprendi a importância de ir além daquilo que é dito — buscando compreender o contexto, as expectativas e os objetivos reais de quem utiliza a tecnologia. 
+
+                            </p>
                         </p>
-                            <p>A ausência de um gerenciamento eficiente pode resultar em atrasos, custos elevados e, em alguns casos, na descaracterização do conceito original do projeto. Por outro lado, uma gestão estruturada proporciona um fluxo de trabalho organizado, comunicação clara entre todos os envolvidos e uma entrega final alinhada às expectativas.
-
-                                Em suma, o gerenciamento de projetos não é apenas um suporte técnico, mas também um meio de garantir que a visão do projeto seja fielmente traduzida em espaços reais, combinando funcionalidade, estética e satisfação do cliente. É a base que conecta o planejamento à execução, consolidando o sucesso de cada projeto.
+                            <p>Esse aprendizado me mostrou que o levantamento e a análise de requisitos são mais do que tarefas iniciais de um projeto; são práticas que garantem alinhamento, reduzem riscos e constroem as bases para o sucesso de qualquer solução tecnológica. É por meio delas que transformamos ideias em projetos sólidos, focados e realmente relevantes para quem irá utilizá-los.
                                 
-                                </p>
-                    </div>
-                </div>
-        </div>
+                        </p>
 
+                        <div class="imagens-baixo">
+                            <img src="images/REQUISITO3.png" alt="Descrição 1" onclick="openModal(0)">
+                            <img src="images/REQUISITO4.png" alt="Descrição 2" onclick="openModal(1)">
+                            <img src="images/REQUISITO5.png" alt="Descrição 3" onclick="openModal(2)">
+                        </div>
+
+                        <div class="modal" id="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <span class="arrow left" onclick="prevImage()">&#10094;</span>
+                            <img id="modal-image" src="">
+                            <span class="arrow right" onclick="nextImage()">&#10095;</span>
+                        </div>
+                          
+                        <script>
+                            const images = [
+                              'images/REQUISITO3.png',
+                              'images/REQUISITO4.png',
+                              'images/REQUISITO5.png'
+                            ];
+                            let currentIndex = 0;
+                          
+                            function openModal(index) {
+                              currentIndex = index;
+                              document.getElementById('modal-image').src = images[currentIndex];
+                              document.getElementById('modal').style.display = 'block';
+                            }
+                          
+                            function closeModal() {
+                              document.getElementById('modal').style.display = 'none';
+                            }
+                          
+                            function nextImage() {
+                              currentIndex = (currentIndex + 1) % images.length;
+                              document.getElementById('modal-image').src = images[currentIndex];
+                            }
+                          
+                            function prevImage() {
+                              currentIndex = (currentIndex - 1 + images.length) % images.length;
+                              document.getElementById('modal-image').src = images[currentIndex];
+                            }
+                        </script>
+
+                        
+                    </div>
+                </div>            
+        </div>
+        
         <footer>
 
             <div class="footer_main">
-            
     
                 <div class="footer_tag">
                     <h2>Quick Link</h2>
@@ -320,10 +430,11 @@
     
                 <div class="footer_tag">
                     <h2>Contato</h2>
-                    <p>+55 11 9376 9311</p>
+                    <p>+55 11 97729 6336</p>
                     <p>+55 11 2229 1174</p>
-                    <p>alinemendes.interiores@gmail.com</p>
-                    <p>alinemendes.lima2000@gmail.com</p>
+                    <p>amandaelima2003@hotmail.com</p>
+                    <p>amandaelima2003@gmail.com</p>
+
                 </div>
     
                 <div class="footer_tag">
@@ -337,18 +448,13 @@
                 </div>
     
                 <div class="footer_logo">
-                    <img src="images/Black___White_Minimalist_Aesthetic_Initials_Font_Logo-removebg-preview.png" alt="Logo">
+                    <img src="images/1-removebg-preview.png" alt="Logo">
                 </div>
-                
             </div>
     
-            
-                    
-                <p class="end_dois">@2023 - Aline Mendes de Lima. Todos os direitos reservados.</p>
+                <p class="end">@2025 - Amanda Mendes de Lima. Todos os direitos reservados.</p>
     
-    
-        </footer>
-    
+        </footer>   
     
     </header>
 

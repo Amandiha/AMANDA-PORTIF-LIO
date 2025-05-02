@@ -38,6 +38,4 @@ cross.addEventListener('click', function(){
 
 
 
-
-
                        
